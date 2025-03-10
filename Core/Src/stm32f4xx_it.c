@@ -207,7 +207,7 @@ void ADC_IRQHandler(void)
   /* USER CODE BEGIN ADC_IRQn 0 */
 
   /* USER CODE END ADC_IRQn 0 */
-	 if (ADC1->SR & ADC_SR_EOC)
+	 if (ADC1->SR & 0x00000010)
 		    {
 		         data = ADC1->DR;
 		        sprintf(buf, "%d\r\n", data);
